@@ -30,15 +30,15 @@ class BankAccountController {
   searchAccount(req, res, next) {
     try {
       const sql = `SELECT * FROM bank_account WHERE
-        id LIKE '%${req.query.id}%' OR
-        name LIKE '%${req.query.name}%' OR
-        phone LIKE '%${req.query.phone}%' OR
-        iban LIKE '%${req.query.iban}%' OR
-        pin LIKE '%${req.query.pin}%' OR
-        address LIKE '%${req.query.address}%' OR
-        balance LIKE '%${req.query.balance}%' OR
-        email LIKE '%${req.query.email}%' OR
-        date LIKE '%${req.query.date}%'
+        id LIKE '%${req.query.query}%' OR
+        name LIKE '%${req.query.query}%' OR
+        phone LIKE '%${req.query.query}%' OR
+        iban LIKE '%${req.query.query}%' OR
+        pin LIKE '%${req.query.query}%' OR
+        address LIKE '%${req.query.query}%' OR
+        balance LIKE '%${req.query.query}%' OR
+        email LIKE '%${req.query.query}%' OR
+        date LIKE '%${req.query.query}%'
         LIMIT ${req.query.showentries} OFFSET ${
         req.query.page * req.query.showentries
       };`;
